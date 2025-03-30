@@ -1,5 +1,7 @@
 using Entity.AppContext;
 using Microsoft.EntityFrameworkCore;
+using Services.BusinessServices;
+using Services.ORM.Configuration.Mapper.CustomerMap;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +21,9 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1"
     });
 });
+
+builder.Services.AddScoped<ICustomerMapper, CustomerMapper>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 
 var app = builder.Build();
 

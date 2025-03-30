@@ -12,7 +12,7 @@ namespace Entity.Models
         [Required]
         public required string FullName { get; set; }
         [Required]
-        public int MobileNumber { get; set; }
+        public required string MobileNumber { get; set; }
         [Required]
         public required string City { get; set; }
         [Required]
@@ -20,7 +20,7 @@ namespace Entity.Models
         public string? Createdby { get; set; }
         [Required]
         public DateTime Timestamp { get; set; }
-        public bool? IsActive { get; set; }
-        public ICollection<PurchaseOrder> PurchaseOrders { get; set; }
+        public bool IsActive { get; set; }
+        public ICollection<PurchaseOrder>? PurchaseOrders { get; set; }
     }
 }

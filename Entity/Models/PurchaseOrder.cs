@@ -20,6 +20,6 @@ namespace Entity.Models
         public DateTime Timestamp { get; set; }
         public bool? IsActive { get; set; }
         public int CustomerId { get; set; }
-        public ICollection<PurchaseItem> PurchaseItems { get; set; }
+        public ICollection<PurchaseItem>? PurchaseItems { get; set; }
     }
 }
